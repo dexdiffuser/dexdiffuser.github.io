@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="DexDiffuser: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation."
+    />
+    <meta name="keywords" content="Diffusion Model, Dexterous Manipulation, Robot Learning" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      DexDiffuser: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation.
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./public/index.css" rel="stylesheet" />
+    <link href="./public/media.css" rel="stylesheet" />
+    <link href="./public/sidebars.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./public/js/base.js"></script>
+  </head>
+
+  <body>
+    <div class="sidebarsWrapper">
+      <div class="sidebars">
+        <a class="barWrapper" clear href="#abstract-a" id="bar2"
+          ><span>Abstract</span>
+          <div class="bar"></div
+        ></a>
+<!--        <a class="barWrapper" clear href="#tr2-a" id="bar3"-->
+<!--          ><span>Framework of DexDiffuser</span>-->
+<!--          <div class="bar"></div-->
+<!--        ></a>-->
+<!--        <a class="barWrapper" clear href="#results-a" id="bar4"-->
+<!--          ><span>Results</span>-->
+<!--          <div class="bar"></div-->
+<!--        ></a>-->
+        <a class="barWrapper" clear href="#results-b" id="bar5"
+          ><span>Visualizations</span>
+          <div class="bar"></div
+        ></a>
+        <a class="barWrapper" clear href="#citation" id="bar6"
+          ><span>Citation</span>
+          <div class="bar"></div
+        ></a>
+<!--        <a class="barWrapper" clear href="#attn-a" id="bar5"-->
+<!--          ><span>Attention Analysis</span>-->
+<!--          <div class="bar"></div-->
+<!--        ></a>-->
+      </div>
+    </div>
+    <main class="content">
+      <section class="heading" style="text-align: center!important;">
+        <h1 class="title">
+          DexDiffuser: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation
+        </h1>
+        <section class="authors">
+          <ul>
+            <li>
+              <span
+                ><a
+                  href="https://liang-zx.github.io/"
+                  rel="noreferrer"
+                  target="_blank"
+              >Zhixuan Liang</a
+                ><sup>1 2</sup></span
+              >
+            </li>
+            <li>
+              <span
+                ><a
+                  href="https://yaomarkmu.github.io/"
+                  rel="noreferrer"
+                  target="_blank"
+                  >Yao Mu</a
+                ><sup>1 3</sup></span
+              >
+            </li>
+            <li>
+              <span
+                ><a
+                  href=""
+                  rel="noreferrer"
+                  target="_blank"
+                  >Yixiao Wang</a
+                ><sup>2</sup></span
+              >
+            </li>
+            <li>
+              <span
+                ><a
+                  href=""
+                  rel="noreferrer"
+                  target="_blank"
+                  >Fei Ni</a
+                ><sup>4</sup></span
+              >
+            </li>
+            <li>
+              <span
+                ><a
+                  href=""
+                  rel="noreferrer"
+                  target="_blank"
+                  >Tianxing Chen</a
+                ><sup>3</sup></span
+              >
+            </li>
+            <li>
+              <span
+                ><a
+                  href=""
+                  rel="noreferrer"
+                  target="_blank"
+                  >Wenqi Shao</a
+                ><sup>3</sup></span
+              >
+            </li>
+            <li>
+              <span
+                ><a
+                  href=""
+                  rel="noreferrer"
+                  target="_blank"
+                  >Wei Zhan</a
+                ><sup>2</sup></span
+              >
+            </li>
+            <li>
+              <span
+                ><a
+                  href="https://me.berkeley.edu/people/masayoshi-tomizuka/"
+                  rel="noreferrer"
+                  target="_blank"
+                  >Masayoshi Tomizuka</a
+                ><sup>2</sup></span
+              >
+            </li>
+            <li>
+              <span
+                ><a
+                  href="http://luoping.me/"
+                  rel="noreferrer"
+                  target="_blank"
+                  >Ping Luo</a
+                ><sup>1&#8224;</sup></span
+              >
+            </li>
+            <li>
+              <span
+                ><a
+                  href="https://dingmyu.github.io/"
+                  rel="noreferrer"
+                  target="_blank"
+                  >Mingyu Ding</a
+                ><sup>2</sup></span
+              >
+            </li>
+          </ul>
+        </section>
+        <section class="affiliations">
+          <ul>
+            <li><sup>1</sup>The University of Hong Kong,</li>
+            <li><sup>2</sup>UC Berkeley,</li>
+            <li><sup>3</sup>Shanghai AI Laboratory,</li>
+            <li><sup>4</sup>Tianjin University</li>
+          </ul>
+        </section>
+        <section class="corresponding">
+          <p>
+            <sup>&#8224;</sup>Corresponding authors
+          </p>
+        </section>
+<!--        <section class="conference">-->
+<!--          <h3>-->
+<!--          CVPR 2024-->
+<!--          </h3>-->
+<!--        </section>-->
+        <section class="links">
+          <ul>
+<!--            <a href="https://arxiv.org/abs/2312.11598" rel="noreferrer" target="_blank">-->
+<!--              <li>-->
+<!--                <span class="icon"> <img src="./public/paper.svg" /> </span-->
+<!--                ><span>Paper</span>-->
+<!--              </li>-->
+<!--            </a>-->
+<!--            <a-->
+<!--              href="https://github.com/Liang-ZX/skilldiffuser"-->
+<!--              rel="noreferrer"-->
+<!--              target="_blank"-->
+<!--            >-->
+<!--              <li>-->
+<!--                <span class="icon">-->
+<!--                  <img src="./public/github.svg" />-->
+<!--                </span>-->
+<!--                <span>Code</span>-->
+<!--              </li>-->
+<!--            </a>-->
+<!--            <a-->
+<!--              href="https://connecthkuhk-my.sharepoint.com/:f:/g/personal/liangzx_connect_hku_hk/EsG1hKy8HBJOu3dalCZJPjoBUAseo_fMKZykG6H2qhh0Dg"-->
+<!--              rel="noreferrer"-->
+<!--              target="_blank"-->
+<!--            >-->
+<!--              <li>-->
+<!--                <span class="icon"> <img src="./public/database2.svg" style="width: 100%;filter: invert(100%); stroke-width: 200%; padding-bottom:2.5px"/> </span-->
+<!--                ><span>Dataset</span>-->
+<!--              </li>-->
+<!--            </a>-->
+          </ul>
+        </section>
+        <a class="anchor" id="abstract-a"></a>
+        <h2>Abstract</h2>
+        <p class="abstract" style="font-family: 'Times New Roman', Arial; text-align: justify">
+          Dexterous manipulation with contact-rich interactions is crucial for advanced robotics. While recent diffusion-based planning approaches show promise for simpler manipulation tasks, they often produce unrealistic ghost states (e.g., the object automatically moves without hand contact) or lack adaptability when handling complex sequential interactions. In this work, we introduce DexDiffuser, an interaction-aware diffusion planning framework for adaptive dexterous manipulation. DexDiffuser models joint state-action dynamics through a dual-phase diffusion process which consists of pre-interaction contact alignment and post-contact goal-directed control, enabling goal-adaptive generalizable dexterous manipulation. Additionally, we incorporate dynamics model-based dual guidance and leverage large language models for automated guidance function generation, enhancing generalizability for physical interactions and facilitating diverse goal adaptation through language cues. Experiments on physical interaction tasks such as door opening, pen and block re-orientation, and hammer striking demonstrate DexDiffuser's effectiveness on goals outside training distributions, achieving over twice the average success rate (59.2% vs. 29.5%) compared to existing methods. Our framework achieves 70.0% success on 30-degree door opening, 40.0% and 36.7% on pen and block half-side re-orientation respectively, and 46.7% on hammer nail half drive, highlighting its robustness and flexibility in contact-rich manipulation.
+        </p>
+      </section>
+<!--      <section class="head-media">-->
+<!--        <div style="display: flex; width: 100%; height:auto; margin: auto; justify-content: center; align-items: center">-->
+<!--          <img-->
+<!--          style="width: 70%; height: auto"-->
+<!--          src="./public/images/details.png"-->
+<!--          />-->
+<!--        </div>-->
+<!--        <p class="caption" style="text-align: justify; font-family: 'Times New Roman'; width: 100%">-->
+<!--            <strong>Overall framework and performance comparison of AdaptDiffuser.</strong> \alias's low level skill-conditioned diffusion planning model.} Notably, while the schematic here employs images to represent visual features for illustrative purposes, in actual implementation, both the input to and the sampling output of the diffusion model are state embeddings. The current observation is also the feature embedding of current visual observation.-->
+<!--          </p>-->
+<!--      </section>-->
+
+      <a class="anchor" id="tr2-a"></a>
+<!--      <section class="details" style="text-align: justify;">-->
+<!--        <h2>Framework of SkillDiffuser</h2>-->
+<!--        <div style="display: flex; margin: auto; width: 100%; height: auto">-->
+<!--          <img-->
+<!--          style="width: 40%; height: auto"-->
+<!--          src="./public/images/framework.png"-->
+<!--          />-->
+<!--          &nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--          <br />-->
+<!--          <img-->
+<!--          style="width: 60%; height: 60%; margin-top: 1em"-->
+<!--          src="./public/images/details.png"-->
+<!--          />-->
+<!--        </div>-->
+<!--        <br />-->
+<!--        <p style="font-family: 'Times New Roman',serif"> <strong>Overall framework of SkillDiffuser.</strong> It's a hierarchical planning model that leverages the cooperation of interpretable skill abstractions at the higher level and a skill conditioned diffusion model at the lower level for task execution in a multi-task learning environment. The high-level skill abstraction is achieved through a skill predictor and a vector quantization operation, generating sub-goals (skill set) that the diffusion model employs to determine the appropriate future states. Future states are converted to actions using an inverse dynamics model. This unique fusion enables a consistent underlying planner across different tasks, with the variation only in the inverse dynamics model.-->
+<!--        </p>-->
+
+<!--        <a class="anchor" id="results-a"></a>-->
+<!--        <h2>Results</h2>-->
+<!--        <h3 style="margin-bottom: 0">Task-wise Performance on LOReL Dataset</h3>-->
+<!--        <div style="display: flex; margin: auto; width: 95%; height: auto; justify-content: center">-->
+<!--        <img-->
+<!--          style="width: 55%; height: auto; margin-top: 1.2em"-->
+<!--          src="./public/images/lorel_bar.png"-->
+<!--        />-->
+<!--        </div>-->
+<!--        <p class="caption" style="text-align: center; font-family: 'Times New Roman',serif; margin-top: 0; margin-bottom: 0">-->
+<!--          <strong>Fig.1 Task-wise success rates (in %) on LOReL Sawyer Dataset.</strong>-->
+<!--        </p>-->
+<!--        <div style="display: flex; margin: auto; width: 95%; height: auto; justify-content: center">-->
+<!--        <img-->
+<!--          style="width: 55%; height: auto; margin-top: 1.2em"-->
+<!--          src="./public/images/rephrase_bar.png"-->
+<!--        />-->
+<!--        </div>-->
+<!--        <p class="caption" style="text-align: center; font-family: 'Times New Roman',serif; margin-top: 0">-->
+<!--          <strong>Fig.2 Rephrasal-wise success rates (in %) on LOReL Sawyer Dataset.</strong>-->
+<!--        </p>-->
+<!--        <p style="font-family: 'Times New Roman',serif">-->
+<!--          As can be seen from the figures, especially from Fig. 2, <strong>our method's average performance on 5 rephrases is nearly 10 percentage points higher than the previous SOTA</strong>, which demonstrates its strong robustness against ambiguous language instructions.</p>-->
+
+<!--        <h3 style="margin-bottom: 0">Performance on LOReL Compositional Tasks</h3>-->
+<!--        <p style="font-family: 'Times New Roman',serif">We conduct experiments following the same settings of unseen composition tasks of LISA with 12 composition instructions in Table 1. Detailed instructions are listed in Table 2. We extend the max number of episode steps from customary 20 to 40, as LISA.</p>-->
+<!--        <div style="display: flex; margin: auto; width: 95%; height: auto; justify-content: center">-->
+<!--        <img-->
+<!--          style="width: 55%; height: auto; margin-top: 0em"-->
+<!--          src="./public/images/composition_table.png"-->
+<!--        />-->
+<!--        </div>-->
+<!--        <p class="caption" style="text-align: center; font-family: 'Times New Roman',serif; margin-top: 0; margin-bottom: 0">-->
+<!--          <strong>Tab.1 Performance on LOReL Multi-step Composition Tasks.</strong>-->
+<!--        </p>-->
+<!--        <div style="display: flex; margin: auto; width: 95%; height: auto; justify-content: center">-->
+<!--        <img-->
+<!--          style="width: 50%; height: auto; margin-top: 1.2em"-->
+<!--          src="./public/images/composition_instruc.png"-->
+<!--        />-->
+<!--        </div>-->
+<!--        <p class="caption" style="text-align: center; font-family: 'Times New Roman',serif; margin-top: 0; margin-bottom: 0">-->
+<!--          <strong>Tab.2 LOReL Composition Task Instructions.</strong>-->
+<!--        </p>-->
+
+<!--        <p style="font-family: 'Times New Roman',serif">We observe SkillDiffuser achieves 2x the performance of non-hierarchical baseline (<em>i.e.</em> w/o skill abstraction) and also improves about 25% over LISA, highlighting its effectiveness. MPC-based LOReL planners are unable to perform as well in open scenarios like composition tasks.</p>-->
+
+<!--        <h3 style="margin-bottom: 0">Task-wise Performance on Meta-World Dataset</h3>-->
+<!--        <p style="font-family: 'Times New Roman',serif"> We also provide the task-wise success-rates on Meta-World MT10 dataset in Fig. 4, achieved by Flat R3M, Language-conditioned Diffuser and our SkillDIffuser.</p>-->
+<!--        <div style="display: flex; margin: auto; width: 95%; height: auto; justify-content: center">-->
+<!--        <img-->
+<!--          style="width: 55%; height: auto; margin-top: 0"-->
+<!--          src="./public/images/MT10_task.png"-->
+<!--        />-->
+<!--        </div>-->
+<!--        <p class="caption" style="text-align: center; font-family: 'Times New Roman',serif; margin-top: 0; margin-bottom: 0.5em">-->
+<!--          <strong>Fig.3 Partially visual observations of all the 10 tasks in Meta-World MT10 Dataset.</strong>-->
+<!--        </p>-->
+<!--        <div style="display: flex; margin: auto; width: 95%; height: auto; justify-content: center">-->
+<!--        <img-->
+<!--          style="width: 60%; height: auto; margin-top: 0.5em"-->
+<!--          src="./public/images/bar2.png"-->
+<!--        />-->
+<!--          </div>-->
+<!--        <p class="caption" style="text-align: center; font-family: 'Times New Roman',serif; margin-top: 0; margin-bottom: 0">-->
+<!--          <strong>Fig.4 Task-wise success rates (in %) on Meta-World MT10 Dataset.</strong>-->
+<!--        </p>-->
+
+<!--        <a class="anchor" id="results-b"></a>-->
+<!--        <h2>Visualizations</h2>-->
+<!--        <h3 style="margin-bottom: 0">Word Cloud of Learned Skills</h3>-->
+<!--        <p style="font-family: 'Times New Roman',serif">The model has successfully mastered multiple key skills (we pick 8 of them for visualization here). These skills demonstrate strong <strong>robustness to ambiguous language instructions</strong>. For instance, in Fig. 5, skill 4 effectively abstracts the skill of "open a drawer'" from ambiguous expressions such as "<em>open a container</em>", "<em>pull a dresser</em>", "<em>pull a drawer</em>" and random combinations of these words. Similarly, skill 6 extracts the skill of "<em>turn a faucet to the left</em>".  This analysis indicates our method's resilience to varied and poorly defined language inputs, confirming our SkillDiffuser can competently interpret and act upon a wide range of linguistic instructions, even those that are ambiguous or incomplete.</p>-->
+<!--        <div style="display: flex; margin: auto; width: 100%; height: auto">-->
+<!--          <div>-->
+<!--        <img-->
+<!--          style="width: 100%; height: auto; margin-top: 0.5em"-->
+<!--          src="./public/images/wordcloud1.png"-->
+<!--        />-->
+<!--            <p class="caption" style="text-align: center; font-family: 'Times New Roman',serif; margin-top: 0; margin-bottom: 0">-->
+<!--              <strong>Fig.5 Word cloud of learned skills in LOReL Sawyer Dataset.</strong> We show eight of them here with the size corresponding to the word frequency in one skill.-->
+<!--        </p>-->
+<!--          </div>-->
+<!--          &nbsp;&nbsp;-->
+<!--          <div>-->
+<!--          <img-->
+<!--          style="width: 100%; height: auto; margin-top: 0.5em"-->
+<!--          src="./public/images/wordcloud2.png"-->
+<!--        />-->
+<!--            <p class="caption" style="text-align: center; font-family: 'Times New Roman',serif; margin-top: 0; margin-bottom: 0">-->
+<!--              <strong>Fig.6 Word cloud of learned skills in Meta-World MT10 Dataset.</strong> We show eight of them here with the size corresponding to the word frequency in one skill.-->
+<!--        </p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <h3 style="margin-bottom: 0">Heat Map of Word Frequency</h3>-->
+<!--        <div>-->
+<!--        <div style="display: flex; margin: auto; width: 100%; height: auto; justify-content: center">-->
+<!--        <img-->
+<!--          style="width: 70%; height: auto; margin-top: 1em; margin-bottom: 0.3em"-->
+<!--          src="./public/images/heatmap1.png"-->
+<!--        />-->
+<!--          </div>-->
+<!--          <p class="caption" style="text-align: center; font-family: 'Times New Roman',serif; margin-top: 0; margin-bottom: 0.5em">-->
+<!--          <strong>Fig.7 Visualization of skill heat map on LOReL. </strong>-->
+<!--        </p>-->
+<!--        </div>-->
+<!--        <p style="font-family: 'Times New Roman',serif"> We show the visualization results of skill set on LOReL Sawyer Dataset in Fig. 7. The visualization results show that out of a 20-size skill-set, our SkillDiffuser learned 11 skills (<em>e.g. shut close container drawer, pull drawer handle etc.</em>) notably distinguished by their unique word highlights. The results demonstrate strong skill abstraction abilities. For example, the skill "<em>shut close container drawer</em>" abstracts different expressions like "<em>shut drawer</em>", "<em>shut container</em>" into one skill semantic.</p>-->
+
+<!--      </section>-->
+
+<!--      <section class="citation" style="text-align: justify;">-->
+<!--        <a class="anchor" id="citation"></a>-->
+<!--        <h2>Bibtex</h2>-->
+<!--        <pre>-->
+<!--<code>@article{liang2023skilldiffuser,-->
+<!--  title={SkillDiffuser: Interpretable Hierarchical Planning via Skill Abstractions in Diffusion-Based Task Execution},-->
+<!--  author={Zhixuan Liang and Yao Mu and Hengbo Ma and Masayoshi Tomizuka and Mingyu Ding and Ping Luo},-->
+<!--  journal={arXiv preprint arXiv:2312.11598},-->
+<!--  year={2023},-->
+<!--}</code></pre>-->
+<!--      </section>-->
+      <br />
+<!--      <section class="acknowledgements">-->
+<!--        <h2>Acknowledgements</h2>-->
+<!--        <p style="font-family: 'Times New Roman', Arial;">-->
+<!--          This paper is partially supported by the National Key R&D Program of China No.2022ZD0161000 and the General Research Fund of Hong Kong No.17200622. Special thanks to additional members of the HKU-MMLab for writing feedback.-->
+<!--        </p>-->
+<!--      </section>-->
+    </main>
+  </body>
+</html>

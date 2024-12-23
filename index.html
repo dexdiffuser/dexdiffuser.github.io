@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <meta
       name="description"
-      content="DexDiffuser: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation."
+      content="DexHandDiff: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation."
     />
     <meta name="keywords" content="Diffusion Model, Dexterous Manipulation, Robot Learning" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      DexDiffuser: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation.
+      DexHandDiff: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation.
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,7 +32,7 @@
           <div class="bar"></div
         ></a>
 <!--        <a class="barWrapper" clear href="#tr2-a" id="bar3"-->
-<!--          ><span>Framework of DexDiffuser</span>-->
+<!--          ><span>Framework of DexHandDiff</span>-->
 <!--          <div class="bar"></div-->
 <!--        ></a>-->
 <!--        <a class="barWrapper" clear href="#results-a" id="bar4"-->
@@ -56,7 +56,7 @@
     <main class="content">
       <section class="heading" style="text-align: center!important;">
         <h1 class="title">
-          DexDiffuser: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation
+          DexHandDiff: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation
         </h1>
         <section class="authors">
           <ul>
@@ -204,7 +204,7 @@
         <a class="anchor" id="abstract-a"></a>
         <h2>Abstract</h2>
         <p class="abstract" style="font-family: 'Times New Roman', Arial; text-align: justify">
-          Dexterous manipulation with contact-rich interactions is crucial for advanced robotics. While recent diffusion-based planning approaches show promise for simpler manipulation tasks, they often produce unrealistic ghost states (e.g., the object automatically moves without hand contact) or lack adaptability when handling complex sequential interactions. In this work, we introduce DexDiffuser, an interaction-aware diffusion planning framework for adaptive dexterous manipulation. DexDiffuser models joint state-action dynamics through a dual-phase diffusion process which consists of pre-interaction contact alignment and post-contact goal-directed control, enabling goal-adaptive generalizable dexterous manipulation. Additionally, we incorporate dynamics model-based dual guidance and leverage large language models for automated guidance function generation, enhancing generalizability for physical interactions and facilitating diverse goal adaptation through language cues. Experiments on physical interaction tasks such as door opening, pen and block re-orientation, and hammer striking demonstrate DexDiffuser's effectiveness on goals outside training distributions, achieving over twice the average success rate (59.2% vs. 29.5%) compared to existing methods. Our framework achieves 70.0% success on 30-degree door opening, 40.0% and 36.7% on pen and block half-side re-orientation respectively, and 46.7% on hammer nail half drive, highlighting its robustness and flexibility in contact-rich manipulation.
+          Dexterous manipulation with contact-rich interactions is crucial for advanced robotics. While recent diffusion-based planning approaches show promise for simpler manipulation tasks, they often produce unrealistic ghost states (e.g., the object automatically moves without hand contact) or lack adaptability when handling complex sequential interactions. In this work, we introduce DexHandDiff, an interaction-aware diffusion planning framework for adaptive dexterous manipulation. DexHandDiff models joint state-action dynamics through a dual-phase diffusion process which consists of pre-interaction contact alignment and post-contact goal-directed control, enabling goal-adaptive generalizable dexterous manipulation. Additionally, we incorporate dynamics model-based dual guidance and leverage large language models for automated guidance function generation, enhancing generalizability for physical interactions and facilitating diverse goal adaptation through language cues. Experiments on physical interaction tasks such as door opening, pen and block re-orientation, and hammer striking demonstrate DexHandDiff's effectiveness on goals outside training distributions, achieving over twice the average success rate (59.2% vs. 29.5%) compared to existing methods. Our framework achieves 70.0% success on 30-degree door opening, 40.0% and 36.7% on pen and block half-side re-orientation respectively, and 46.7% on hammer nail half drive, highlighting its robustness and flexibility in contact-rich manipulation.
         </p>
       </section>
       <section class="head-media">
@@ -215,7 +215,7 @@
           src="./public/images/teaser.png"
           />
           <p class="caption" style="text-align: justify; font-family: 'Times New Roman'; width: 40%">
-            <strong>Overview of DexDiffuser.</strong> (a) Previous diffusers directly apply goal guidance to object states, which leads to ghost states where objects move independently leaving hand states unchanged. (b) DexDiffuser introduces contact guidance that jointly influences both hand/object states and hand actions, while maintaining tight state-action coupling. It not only prevents ghost states, but also enables precise goal adaptation through coordinated hand-object motion. (c) Quantitative comparisons with previous methods on goal-adapted interaction tasks.
+            <strong>Overview of DexHandDiff.</strong> (a) Previous diffusers directly apply goal guidance to object states, which leads to ghost states where objects move independently leaving hand states unchanged. (b) DexHandDiff introduces contact guidance that jointly influences both hand/object states and hand actions, while maintaining tight state-action coupling. It not only prevents ghost states, but also enables precise goal adaptation through coordinated hand-object motion. (c) Quantitative comparisons with previous methods on goal-adapted interaction tasks.
           </p>
         </div>
 

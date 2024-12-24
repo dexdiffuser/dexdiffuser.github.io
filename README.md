@@ -1,1 +1,1 @@
-# DexDiffuser: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation
+# DexHandDiff: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation
